@@ -1,0 +1,126 @@
+* {
+	margin: 0%;
+	padding: 0%;
+	box-sizing: border-box;
+    background-color: #FF83B3;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+NL:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gorditas:wght@400;700&display=swap');
+
+@media screen and (max-width: 425px) {
+    #body{
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        margin-top: 50px;
+        .title{
+            display: flex;
+            flex-wrap: wrap;
+            margin: 5px 5px 5px 5px;
+            justify-content: center;
+            justify-items: center;
+            font-family: "Satisfy", cursive;
+            font-weight: 400;
+            font-style: normal;
+            color: white;
+        }
+        #cartel1{
+            background-color: #e4407f;
+            color: white;
+            padding: 20px;
+            border-radius: 23px;
+            font-family: "Playwrite NL", cursive;
+            font-optical-sizing: auto;
+            font-weight: 16px;
+            font-style: normal;
+            .pcarter{
+                background-color: #e4407f;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+            }
+            #botones{
+                @extend #cartel1;
+                display: flex;
+                justify-content: space-between;
+                .btn1{
+                    text-align: center;
+                    padding: 0.5em;
+                    box-sizing: border-box;
+                    background: #F26766;
+                    border: none;
+                    box-shadow: none;
+                    text-decoration: none;
+                    border-radius: 0.25em;
+                    font-size: 15px;
+                    color: white;
+                    font-family: "Gorditas", serif;
+                    font-weight: 40px;
+                    font-size: 20px;
+                    font-style: normal;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .sep{
+                    @extend .pcarter;
+                    padding: 5px;
+                }
+                .btn2{
+                    @extend .btn1;
+                
+                }
+            }
+
+        }
+    }
+    #cartel_si{
+        background-color: #e4407f;
+        color: white;
+        padding: 20px;
+        border-radius: 23px;
+        font-family: "Playwrite NL", cursive;
+        font-optical-sizing: auto;
+        font-weight: 16px;
+        font-style: normal;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        padding: 15px;
+        #btnYes{
+            background-color: #e4407f;
+            color: white;
+            font-family: "Playwrite NL", cursive;
+            font-optical-sizing: auto;
+            font-weight: 16px;
+            font-style: normal;
+            margin-bottom: 15px;
+        }
+        #btnNo{
+            @extend #btnYes ;    
+        }
+    }
+    #cartel_no{
+        background-color: #e4407f;
+        color: white;
+        padding: 20px;
+        border-radius: 23px;
+        font-family: "Playwrite NL", cursive;
+        font-optical-sizing: auto;
+        font-weight: 16px;
+        font-style: normal;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        padding: 15px;
+        margin-top: -15px;
+    }
+}

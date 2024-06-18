@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Denguita Amor mio</title>
+</head>
+<body>
+    <div id="body">
+        
+        <h1 class="title">Hola amor Preciosa miaaa!!!</h1>
+        <h2 class="title">Como estas denguitaaa?</h2>
+        
+        <div id="cartel1">
+            <p class="pcarter">Espero que andes supperrr</p>
+            <p class="pcarter">Tengo una pregunta para tiii</p>
+            <p class="pcarter">La puedes contestarrrr???</p>
+            <p class="pcarter">Toca el boton de aca abajo segun tu respuesta</p>
+            <div id="botones">
+                <button class="btn1">Sipidipiii</button>
+                <span class="sep">  <--- Estos son los botones ---> </span>
+                <button class="btn2">Nopidopii</button>
+            </div>
+        </div>
+    </div>
+        
+    <div id="cartel_si" style="display: none;">
+        <p>Me aaaamas???? tocaa el botoon</p>
+        <button id="btnYes">Yessss</button>
+        <button id="btnNo">Nopee</button>
+    </div>
+
+    <div id="videoContainer" style="display: none;">
+        <video id="myVideo" controls autoplay>
+            <source src="./img/videoFinal/videoFinal.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div id="cartel_no" style="display: none;">
+        <p>¡Zorra!!!</p>
+    </div>
+
+    <script>
+        const botonSi = document.querySelector('.btn1');
+        const botonNo = document.querySelector('.btn2');
+        const cartelSi = document.getElementById('cartel_si');
+        const cartelNo = document.getElementById('cartel_no');
+        const body = document.getElementById('body');
+        const btnYes = document.getElementById('btnYes');
+        const btnNo = document.getElementById('btnNo');
+        const videoContainer = document.getElementById('videoContainer');
+
+        btnYes.addEventListener('click', function() {
+            cartelSi.style.display = 'none'; // Oculta el cartel de pregunta
+            videoContainer.style.display = 'block'; // Muestra el contenedor de video
+        });
+
+        btnNo.addEventListener('click', function() {
+            cartelSi.style.display = 'none'; // Oculta el cartel de pregunta
+            cartelNo.style.display = 'flex'; // Muestra el cartel de respuesta negativa
+        });
+
+        botonSi.addEventListener('click', function() {
+            body.innerHTML = ''; // Elimina completamente el contenido del body (cartel1 en este caso)
+            cartelSi.style.display = 'flex'; // Muestra el cartel de pregunta
+        });
+
+        botonNo.addEventListener('click', function() {
+            body.innerHTML = ''; // Elimina completamente el contenido del body (cartel1 en este caso)
+            cartelNo.style.display = 'flex'; // Muestra el cartel de respuesta negativa
+        });
+    </script>
+</body>
+</html>
